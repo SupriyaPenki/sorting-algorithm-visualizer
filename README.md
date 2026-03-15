@@ -1,3 +1,6 @@
+## Live Demo
+https://supriyapenki.github.io/sorting-algorithm-visualizer/
+
 # Sorting Algorithm Visualizer
 
 This project is an interactive web application that helps users understand how sorting algorithms work through visualization.

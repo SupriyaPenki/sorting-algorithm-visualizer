@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizer - Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Sorting-Visualizer</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visualizer.html" class="active">Sorting</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="visualizer-container">
+        <div class="controls-panel">
+            <div class="control-group">
+                <button id="generate-array" class="btn secondary-btn">Generate New Array</button>
+            </div>
+
+            <div class="control-group slider-group">
+                <label for="array-size">Array Size: <span id="size-value">50</span></label>
+                <input type="range" id="array-size" min="10" max="150" value="50">
+            </div>
+
+            <div class="control-group slider-group">
+                <label for="speed-slider">Speed: <span id="speed-value">Fast</span></label>
+                <input type="range" id="speed-slider" min="1" max="100" value="80">
+            </div>
+
+            <div class="control-group buttons-group">
+                <button id="bubble-sort" class="btn algo-btn">Bubble Sort</button>
+                <button id="merge-sort" class="btn algo-btn">Merge Sort</button>
+                <button id="quick-sort" class="btn algo-btn">Quick Sort</button>
+            </div>
+        </div>
+
+        <div id="bars-container" class="bars-container">
+            <!-- Bars will be generated here by JS -->
+        </div>
+
+        <div class="info-section">
+            <div class="info-header">
+                <h2 id="algo-name">Select an Algorithm</h2>
+            </div>
+
+            <div class="info-content" id="info-content" style="display: none;">
+                <div class="code-section">
+                    <h3>Java Code Implementation</h3>
+                    <pre><code id="java-code"></code></pre>
+                </div>
+
+                <div class="details-section">
+                    <div class="complexity-card time-complexity">
+                        <h3>Time Complexity</h3>
+                        <p><strong>Best Case:</strong> <span id="time-best"></span></p>
+                        <p><strong>Average Case:</strong> <span id="time-avg"></span></p>
+                        <p><strong>Worst Case:</strong> <span id="time-worst"></span></p>
+                    </div>
+
+                    <div class="complexity-card space-complexity">
+                        <h3>Space Complexity</h3>
+                        <p><span id="space-comp"></span></p>
+                    </div>
+
+                    <div class="explanation-card">
+                        <h3>How it works</h3>
+                        <p id="algo-explanation"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
